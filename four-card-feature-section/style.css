@@ -59,7 +59,7 @@ header > .header-description {
 .card {
 	display: flex;
 	flex-direction: column;
-	width: 350px;
+	max-width: 350px;
 	height: 257px;
 	margin: 15px;
 	padding: 30px;
