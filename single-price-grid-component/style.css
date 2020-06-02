@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	/* border: 1px solid red; */
+}
+
+:root {
+	--Cyan: hsl(179, 62%, 43%);
+	--BrightYellow: hsl(71, 73%, 54%);
+	--LightGray: hsl(204, 43%, 93%);
+	--GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	background-color: var(--LightGray);
+}
+
+main {
+	margin: 180px auto;
+	max-width: 650px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		margin-top: 60px;
+	}
+}
+
+.single-price {
+	border-radius: 10px;
+	background-color: #fff;
+	max-width: 650px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	box-shadow: 0px 4px 14px 0px hsl(218, 22%, 67%);
+}
+
+.single-price > .head {
+	max-width: 100%;
+	min-height: 190px;
+	padding: 40px;
+}
+
+.single-price > .head > .title {
+	color: rgb(40, 165, 163);
+	font-size: 1.5em;
+}
+
+.single-price > .head > .subtitle {
+	font-weight: 700;
+	margin-top: 20px;
+	font-size: 1.2em;
+	color: hsl(71, 69%, 51%);
+}
+
+.single-price > .head > .copy {
+	color: var(--GrayishBlue);
+	line-height: 25px;
+	margin-top: 10px;
+}
+
+.single-price > .wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.single-price .subscription > .title,
+.single-price .description > .title {
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.single-price .subscription {
+	background-color: var(--Cyan);
+	padding: 40px;
+	flex-grow: 1;
+}
+
+.single-price .subscription > .price {
+	display: flex;
+	font-weight: 600;
+	font-size: 1.6em;
+	color: #fff;
+	margin-top: 15px;
+	align-items: center;
+}
+
+.single-price .subscription > .price > span {
+	font-weight: normal;
+	font-size: 0.6em;
+	color: #a9e6eb;
+	margin-left: 15px;
+}
+
+.single-price .subscription > .description {
+	color: #fff;
+	margin-top: 5px;
+}
+
+.single-price .subscription > .calltoaction {
+	margin-top: 30px;
+	width: 100%;
+	padding: 15px;
+	background-color: var(--BrightYellow);
+	border: 1px solid var(--BrightYellow);
+	border-radius: 5px;
+	font-weight: 600;
+	color: #fff;
+	font-size: 1.1em;
+	box-shadow: 0px 5px 14px 0px hsla(0, 0%, 45%, 0.801);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.single-price .subscription > .calltoaction:hover {
+	transform: translateY(-5px);
+}
+
+.single-price > .wrapper > .description {
+	background-color: #4abebd;
+	padding: 40px;
+	flex-grow: 1;
+}
+
+.single-price > .wrapper > .description > ul {
+	list-style: none;
+	margin-top: 15px;
+	color: #a9e6eb;
+}
+
+.attribution {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
