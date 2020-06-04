@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--Violet: hsl(257, 40%, 49%);
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: url(./images/bg-desktop.svg);
+	background-color: var(--Violet);
+	background-repeat: no-repeat;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: minmax(450px, auto) 150px;
+	grid-template-areas:
+		'illustration hero'
+		'illustration social-media';
+	margin-top: 80px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+}
+
+header {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding-top: 40px;
+}
+
+.illustration {
+	grid-area: illustration;
+	justify-self: center;
+}
+
+.hero {
+	grid-area: hero;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 40px;
+	margin-top: 40px;
+	color: rgb(236, 236, 236);
+}
+
+.hero__heading {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+.hero__caption {
+	margin-top: 20px;
+}
+
+.hero__cta {
+	margin-top: 20px;
+	padding: 15px;
+	font-size: 1.2em;
+	min-width: 200px;
+	border-radius: 50px;
+	border: none;
+	color: var(--Violet);
+	box-shadow: 0px 8px 11px 5px #0000001a;
+	cursor: pointer;
+}
+
+.social-media {
+	grid-area: social-media;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-bottom: 20px;
+}
+
+.social-media__icon {
+	border: 1px solid rgb(218, 218, 218);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	transition: 0.2s;
+	margin: 5px;
+}
+
+.social-media__icon:hover {
+	border: 1px solid #fff;
+	color: var(--Violet);
+	background-color: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+	header {
+		margin-left: 10px;
+	}
+
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto 100px;
+		grid-template-areas:
+			'illustration'
+			'hero'
+			'social-media';
+	}
+
+	.illustration__mockup {
+		max-width: 100%;
+	}
+
+	.hero {
+		align-items: center;
+		text-align: center;
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-bottom: 40px;
+	}
+
+	.social-media {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.illustration {
+		margin: 20px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	body {
+		background-image: url(./images/bg-mobile.svg);
+	}
+}
